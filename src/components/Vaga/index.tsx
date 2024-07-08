@@ -10,21 +10,28 @@ type Props = {
   requisitos: string[]
 }
 
-const Vaga = (props: Props) => (
+const Vaga = ({
+  titulo,
+  localizacao,
+  nivel,
+  modalidade,
+  salarioMin,
+  salarioMax,
+  requisitos
+}: Props) => (
   <VagasAnuncio>
-    <TitleAnuncioDaVaga>{props.titulo}</TitleAnuncioDaVaga>
+    <TitleAnuncioDaVaga>{titulo}</TitleAnuncioDaVaga>
     <ul>
-      <li>Localizacao: {props.localizacao}</li>
-      <li>Senioridade: {props.nivel}</li>
-      <li>Tipo de contratacao: {props.modalidade}</li>
+      <li>Localização: {localizacao}</li>
+      <li>Senioridade: {nivel}</li>
+      <li>Tipo de contratação: {modalidade}</li>
       <li>
-        Salário: {props.salarioMin} - {props.salarioMax}
+        Salário: {salarioMin} - {salarioMax}
       </li>
-      <li>Requisitos: {props.requisitos.join(', ')}</li>
+      <li>Requisitos: {requisitos.join(', ')}</li>
     </ul>
     <LinkAnuncio href="#">Ver detalhes e candidatar-se</LinkAnuncio>
   </VagasAnuncio>
 )
-
 
 export default Vaga

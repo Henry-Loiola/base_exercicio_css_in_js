@@ -40,3 +40,5 @@ export const Form = styled.form`
 export const H2Title = styled.h2`
   font-family: Gloock, serif;
   font-size: 48px;
+  color: ${(props) => props.theme.CorTextoHero};
+`

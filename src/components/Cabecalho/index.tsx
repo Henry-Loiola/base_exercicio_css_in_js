@@ -1,4 +1,4 @@
-import { StyleHeader } from './styles'
+import { StyleHeader } from './style'
 
 const Cabecalho = () => (
   <StyleHeader>
